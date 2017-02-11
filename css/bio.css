@@ -1,0 +1,119 @@
+/* ---------------------- Citação ------------------------------------- */
+.citacao-bio {
+    background-color: #D9E5E3;                                          /* Cor de fundo do bloco de citação                                                 */
+    border: .5em solid #C2CCCA;                                         /* Borda de 0.5em solida e com cor branca                                           */
+    padding: 1em;                                                       /* Espaçamento de 1em do conteúdo em relação ao bloco                               */
+    margin: 1em 2em;                                                    /* Margem de 1em vertical e 2em horizontal                                          */
+    width: 30ch;                                                        /* Largura da caixa de 30ch                                                         */
+    box-sizing: border-box;                                             /* Medir a caixa em relação as bordas sem contar padding e bordas                   */
+    position: relative;                                                 /* Faz com que a animação seja executada em relação ao bloco de citação             */
+    transition: box-shadow 1s ease-in-out, transform 1s linear;         /* Faz o atributo transform demorar 1s a ser executado e o atributo box-shadow demorar 1s e com entra e saida devagar */
+    transition-delay: 0s, 1s;                                           /* O transform é executado na hora e o box-shadow é executado 1s depois             */
+    -webkit-animation: quica 1s infinite;                               /* Animar o bloco de citação pra ficar quicando de um em um segundo infinitamente   */
+            animation: quica 1s infinite;
+    -webkit-animation-direction: alternate;                             /* Faz a animação ir e voltar alternadamente                                        */
+            animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in;                         /* Modificar a aceleração dessa alternância para fazer a curva                      */
+            animation-timing-function: ease-in;
+}
+@-webkit-keyframes quica {
+    from {                                                              /* Inicio da animação                                                               */
+        top: 0;                                                         /* Inicia no topo do bloco de citação                                               */
+    }
+    to {                                                                /* Fim da animação                                                                  */
+        top: 1em;                                                       /* Move 1em para baixo                                                              */
+    }
+}
+@keyframes quica {
+    from {
+        top: 0;
+    }
+    to {
+        top: 1em;
+    }
+}
+
+.citacao-bio:hover,
+.citacao-bio:focus {
+    box-shadow: 0 0 0 99999px rgba(0,0,0,.8);                           /* Escurecer a tela toda ao passar o mause na citação                               */
+    -webkit-animation-play-state: paused;                               /* Pausa qualquer animação que tiver rodando na citação                             */
+            animation-play-state: paused;
+    transition-delay: 1s, 0s;                                           /* O box-shadow é executado na hora que tira o mause e o transform 1s depois        */
+}
+
+.citacao-bio:nth-of-type(odd):hover,
+.citacao-bio:nth-of-type(odd):focus {
+    transform: scale(1.2) rotate(5deg);                                 /* Aumenta o bloco de citação a direita em 1.2 e rotaciona 5 graus a direita        */
+}
+
+.citacao-bio:nth-of-type(even):hover,
+.citacao-bio:nth-of-type(even):focus {
+    transform: scale(1.2) rotate(-5deg);                                /* Aumenta o bloco de citação a esquerda em 1.2 e rotaciona 5 graus a esquerda      */
+}
+
+.citacao-bio::before {
+    content: '“';                                                       /* Criar um pseudoelemento de aspas duplas na citação                               */
+    position: absolute;                                                 /* Posicionar o pseudoelemento em relação ao bloco de citação                       */
+    line-height: .8;                                                    /* Posiciona o pseudoelemento dentro da citação através de espaçamento de linhas    */
+    font-size: 10em;                                                    /* Tamanho do pseudoelemento aspas duplas                                           */
+    color: #bbb;                                                        /* Cor do pseudoelemento aspas duplas                                               */
+}
+
+.citacao-bio > p {
+    position: relative;                                                 /* Faz o texto aparecer na frente do pseudoelemento aspas duplas                    */
+}
+
+.petrobras {
+    float: left;                                                        /* Posiciona o bloco de citação a esquerda da tela na mesma altura que estava       */
+    margin-left: 0;                                                     /* Margem a esquerda é nula                                                         */
+}
+
+.fiat {
+    float: right;                                                       /* Posiciona o bloco de citação a direita da tela na mesma altura que estava        */
+    margin-right: 0;                                                    /* Margem a direita é nula                                                          */
+}
+
+/* ---------------------- Paragrafos ---------------------------------- */
+.container > p::first-letter {
+    font-size: 200%;                                                    /* Colocar a primeira letra dos paragrafos com fonte de 200px                       */
+    font-weight: bold;                                                  /* Negrito                                                                          */
+    color: #3C1D3D;                                                     /* Cor roxa                                                                         */
+    text-shadow: 1px 1px #000;                                          /* Sombramento preto a 1px a direita e 1px pra baixo                                */
+    margin-right: .2ch;                                                 /* Margem direita da letra de 2ch                                                   */
+    line-height: 1;                                                     /* Espaçamento entre a letra e o texto de 1                                         */
+}
+
+/* ---------------------- Tabelas ------------------------------------- */
+.habilidades {
+    border-collapse: separate;                                            /* Separa uma borda da outra                                                      */
+    border-spacing: .25em;                                                /* Espaçamento entre as bordas                                                    */
+    margin: 1em 0;                                                        /* Margem de 1em horizontal e 0 vertical                                          */
+}
+
+.habilidades th {
+    font-weight: bold;                                                    /* Cabeçalhos das tabelas em negrito                                              */
+    background-color: #851944;                                            /* Com a cor de fundo rosa                                                        */
+    color: white;                                                         /* Com a cor branca                                                               */
+}
+
+.habilidades td {
+    background-color: #eee;                                               /* Cada elemento da tabela terá cor de fundo branca                               */
+}
+
+.habilidades th,
+.habilidades td {
+    padding: 1em;                                                         /* Espaçamento entre cabeçalho e elemento de 1em                                  */
+}
+
+.habilidades thead th {
+    background-color: #3C1D3D;                                          /* Cor de fundo roxa para os cabeçalho do header                                    */
+}
+
+.habilidades [colspan] {
+    text-align: center;                                                   /* Centralizar texto                                                              */
+    font-style: italic;                                                   /* Colocar fonte em italico                                                       */
+}
+
+.habilidades [rowspan] {
+    vertical-align: middle;                                               /* Alinhamento vertical no meio                                                   */
+}

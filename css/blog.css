@@ -1,0 +1,31 @@
+/* ---------------------- Link -------------------------------- */
+.leia-mais {
+    padding: .5em;                                              /* Espaçamento do conteúdo em relação a margem */
+    margin: 1em;                                                /* Margem de 1em */
+    display: block;                                             /* Renderizar os links como blocos */
+    font-size: 1.5em;                                           /* Tamanho da fonte de 1.5em */
+    text-align: center;                                         /* Alinhamento do texto centralizado */
+    background-color: #E6E7E8;                                  /* Cor de fundo branca */ 
+}
+
+
+/* ---------------------- Artigo ------------------------------ */
+.post-blog + .post-blog {
+    padding-top: 1.5em;                                         /* Espaçamento superior de 1.5em */
+    margin-top: 1em;                                            /* Margem superior de 1em */
+    background-image: linear-gradient(to right, 
+                      				  rgba(200, 200, 200, 0), 
+                      				  rgba(200, 200, 200, 1), 
+                      				  rgba(200, 200, 200, 0));  /* Fazer um gradiente entre cores com opacidades diferentes nas linhas divesorias dos posts*/
+    background-size: 100% 2px;                                  /* Largura de 100% e Altura de 1px*/
+    background-repeat: no-repeat;                               /* Não repetir */                        
+}
+
+/*
+
+    em: ...ao tamanho da fonte ('font-size') herdada;
+    ex: ...a altura da letra x (xis) da fonte herdada;
+    px: ...ao dispositivo (midia) de exibição;
+    %: ... a uma medida previamente definida.
+
+*/

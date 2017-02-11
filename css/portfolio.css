@@ -1,0 +1,28 @@
+/* ---------------------- portfolio ----------------------- */
+.portfolio {
+    display: flex;                                          /* O container irá controlará o layout de seus filhos, por padrão eles terão msm altura e alinhados a esquerda  */
+    flex-wrap: wrap;                                        /* Muda o comportamento padrão do flexbox de alinha tudo na mesma linha, add quebra de linha                    */
+}
+
+.portfolio li {
+    flex: 1 1 45%;                                          /* Regula o tamanho dos elementos, os elemento deve crescer e diminuir na mesma proporção (1) que os outros, mas com um mínimo de 45% de largura */
+    border: .5em solid black;                               /* Borda de 0.5em solida e preta                                    */
+    background-color: #FAFFFC;                              /* Cor de fundo branca                                              */    
+    box-sizing: border-box;                                 /* Re-calcular o tamanho do bloco sem incluir a margem              */
+    padding: 1em;                                           /* Espaçamento interno de 1em                                       */
+    margin-right: 1em;                                      /* Margem direita de 1em                                            */
+    margin-bottom: 1em;                                     /* Margem inferior de 1em                                           */
+    -webkit-border-radius:10px;                             /* Arredondar as bordas em todos os tipos de navegadores em 10px    */
+    -moz-border-radius:10px;
+    -o-border-radius:10px;
+    border-radius:10px;
+}
+
+.portfolio img {
+    width: 100%;                                            /* Largura de 100% da imagem em relação ao conteiner                                                            */
+    box-shadow: 0 0 4px #000;                               /* Sombra na imagem com opacidade de 4 e de cor preta                                                           */
+}
+
+.portfolio li:first-child {
+    flex-basis: 100%;                                       /* Determina o tamanho mínimo do elemento */
+}

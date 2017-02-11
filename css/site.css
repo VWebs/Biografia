@@ -1,0 +1,201 @@
+/* ------------------------------------ GERAL ------------------------------------------------------------------------------------ */
+html {
+	font-size: 120%;                                            /* Aumenta em 20% o tamanho da fonte do navegador                  */
+}
+
+body {
+    font-family: "Crimson Text", "Times New Roman", serif;      /* Fonte usada pelo site                                            */
+    background-color: #F2FFFC;                                  /* Cor de fundo do site                                             */
+    font-size: 120%;                                            /* Aumenta em 20% o tamanho da fonte do site                        */
+    line-height: 1.5;                                           /* Altura entre uma linha e outra do texto                          */
+    display: flex;                                              /* Cria uma caixa flex em que o elemento pai controla os filhos     */
+    flex-wrap: wrap;                                            /* Muda o comportamento padrão do flexbox de alinha tudo na mesma linha, add quebra de linha */
+}
+
+/* ------------------------------------ HEADER -----------------------------------------------------------------------------------  */
+.titulo-principal {
+    text-align: center;                                         /* Centraliza o titulo principal                                    */
+    color: #FFF;                                                /* Dar cor ao titulo principal                                      */
+    padding: 2rem;                                              /* Dar um espaçamento ao titulo principal                           */
+    border-bottom: .5rem solid #000;                            /* Borda solida preta e com 0.5rem de espessura                     */
+    background-image: radial-gradient(black, #3C1D3D);          /* Cor gradiente preto e roxo no fundo do titulo principal          */
+}
+
+h1 {
+    text-transform: uppercase;                                  /* Colocar o titulo em letras maiusculas                            */
+    font-size: 3em;                                             /* Tamanho da fonte do titulo                                       */
+    text-shadow: 5px 5px #000;                                  /* Sombra preta do titulo, 5px a esquerda e 5px pra baixo           */
+    -webkit-animation: aparece 2s ease-out;                     /* Animação de aparecer o titulo em 2 segundos com final devagar    */
+            animation: aparece 2s ease-out;                     /* -webkit- é a tag para rodar códigos de CSS3 novos no browser     */ 
+}
+@-webkit-keyframes aparece {
+    0% {                                                        /* Começo da animação                                               */
+        opacity: 0;                                             /* Opacidade nula, vai aumentando gradativamente com a animação     */
+    }
+    100% {                                                      /* Fim da animação                                                  */
+        opacity: 1;                                             /* Opacidade 100%                                                   */
+    }
+}
+@keyframes aparece {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    width: 80ch;                                                /* Aumenta o tamanho do container                                   */
+    margin: auto;                                               /* Centraliza o conteúdo em relação ao container                    */
+    padding: 1.5em;                                             /* Espaçamento do texto em relação ao container de 1.5em            */
+}
+
+/* ------------------------------------ MAIN -------------------------------------------------------------------------------------- */
+main {
+    flex-grow: 1;                                               /* Blocos de tamanhos iguais                                        */
+}
+
+main a {
+    color: #851944;                                             /* Cor dos links                                                    */
+}
+
+main p {
+    text-align: justify;                                        /* Alinhamento do texto com justificado                             */
+    margin: 1em 0;                                              /* 1em para as margens de verticais e 0 para as margins laterais    */
+}
+
+h1,
+h2,
+.subtitulo-principal {
+    font-family: "Open Sans Condensed", "Arial", sans-serif;    /* Fonte do titulo principal e titulos secundarios                  */
+}
+
+.subtitulo-texto {
+    font-size: 1.5em;                                           /* Aumenta a fonte do subtitulo em relação ao tamanho da fonte      */
+}
+
+strong {
+    font-weight: bold;                                          /* Negrito na tag strong                                            */
+}
+
+em {
+    font-style: italic;                                         /* Italico na tag em                                                */
+}
+
+main a:hover,
+main a:focus,
+footer a:hover,
+footer a:focus {
+  color: red;                                                   /* Ao passar o mause o tab sobre os link colocar na cor vermelha    */
+}
+
+
+/* ------------------------------------ ASIDE -------------------------------------------------------------------------------------- */
+.navegacao-site {
+    width: calc(0.9*300px);                                     /* Pegar 90% do tamanho da foto = 300px e usar como tamanho do bloco */
+    position: relative;                                         /* Fazer o bloco ter a posição relativa a tela do pc                 */
+    top: 300px;                                                 /* Mover 300px para baixo em relação a tela do pc                    */
+    text-align: center;                                         /* Centralizar os textos                                             */
+    color: #F2FFFC;                                             /* Cor para os textos                                                */
+    padding: 1em;                                               /* Espaçamento dos textos em relação a foto                          */
+    background-image: radial-gradient(black, #3C1D3D);          /* Gradiente de cores preto e roxo para o fundo do bloco             */
+}
+
+.navegacao-site a {
+    color: inherit;                                             /* Herda a cor do seu parente mais próximo                           */
+    font-family: "Open Sans Condensed", "Arial", sans-serif;    /* Mudar a fonte dos links                                           */
+    text-transform: lowercase;                                  /* Colocar os textos dos link em letras minusculas                   */
+}
+
+.navegacao-site h1 {
+    font-size: 1.5em;                                           /* Fonte de tamanho 1.5em                                            */
+    margin-bottom: 1em;                                         /* margen de baixo de 1em                                            */
+}
+
+.navegacao-site a:hover,
+.navegacao-site a:focus {
+  text-shadow: 0 0 5px pink;                                    /* opacidade x2 e cor rosa ao colocar o mause o tab sobre o link     */
+}
+
+.minha-foto,
+.navegacao-site {
+    border-left: .5em solid black;                              /* Borda esquerda 5px solida e de cor preta                          */
+    border-bottom: .5em solid black;                            /* Borda abaixo 5px solida e de cor preta                            */
+    box-sizing: border-box;                                     /* Medir o bloco em relação as bordas sem contar as margens          */
+}
+
+.minha-foto {
+    position: absolute;                                         /* */
+    top: 0;                                                     /* Posicionar a foto no topo da página                               */
+    right: 0;                                                   /* Posicionar a foto a direita da página                             */
+    height: 300px;                                              /* Altura da foto                                                    */
+}
+
+.icones-redes-sociais li {
+    display: inline-block;                                      /* */
+}
+
+.icones-redes-sociais a {
+    width: 40px;                                                /* Coloca a largura do icone como 40px                               */
+    height: 40px;                                               /* Coloca a altura do icone como 40px                                */
+    display: block;
+    text-indent: -99999px;                                      /* Joga o texto dos icones em 99999px para a esquerda, escondendo-a  */
+    position: relative;                                         /* Link vai servir de referencia para o pseudoelemento :after abaixo */
+}
+
+.icones-redes-sociais a:hover::after,
+.icones-redes-sociais a:focus::after {
+    content: attr(data-tooltip);                                /* Inserir um atributo data-tooltip ao link como um pseudoelemento, transformando-o em algo visual   */
+    position: absolute;                                         /* Posicionar o pseudoelemento em relação ao link acima                                              */
+    top: 100%;                                                  /* O pseudoelemento deve está a 100% do topo, ou seja em baixo do link ou icone                      */
+    right: 0;                                                   /* O pseudoelemento deve está a 0px da direita do link ou icone                                      */
+    text-indent: 0;                                             /* Desativar a identação do texto que foi ativado acima, fazendo ele aparecer nas posições acima     */
+    width: 300%;                                                /* Usando a largura do link como base aumentar em 3x a largura do texto que irá aparecer             */
+    background: black;                                          /* Fundo preto                                                                                       */
+    font-size: .75em;                                           /* Diminuir um pouco o tamanho da fonte do texto                                                     */
+}
+
+.icones-redes-sociais a:hover::before,
+.icones-redes-sociais a:focus::before {
+    content: '';                                                /* Criando um pseudoelemento vazio                                  */
+    width: 1em;                                                 /* Largura do pseudoelemento                                        */
+    height: 1em;                                                /* Altura do pseudoelemento                                         */
+    background-color: black;                                    /* Cor de fundo do pseudolemento                                    */
+    position: absolute;                                         /* Utilizando o link como referencia através do position: relative  */
+    bottom: 0;                                                  /* Posicionar o pseudoelemento para baixo do link                   */
+    left: 0;                                                    /* Posicionar o pseudoelemento a esquerda do link                   */
+    transform: translateY(.5em) rotate(45deg);                  /* Transladar no eixo Y em 0.5em a caixa e rotaciona-la em 45 graus */
+}
+
+.github {
+    background-image: url(../img/github.png);                   /* Inserir a imagem do github                                       */
+}
+
+.twitter {
+    background-image: url(../img/twitter.png);                  /* Inserir a imagem do twitter                                      */
+}
+
+.linkedin {
+    background-image: url(../img/linkedin.png);                 /* Inserir a imagem do linkedin                                     */
+}
+
+/* ------------------------------------ FOOTER ---------------------------------------------------------------------------------------------------------------- */
+.rodape-pagina {
+    color: #F2FFFC;                                                 /* Cor do texto                                                                             */
+    padding: 1em;                                                   /* Espaçamento do conteúdo do rodapé em relação ao rodapé                                   */
+    position: fixed;                                                /* Fixar o rodapé ao rolar a pagína                                                         */
+    bottom: 0;                                                      /* Posicionar o rodapé na parte de baixo                                                    */
+    left: 0;                                                        /* Posicionar o rodapé na parte da esquerda                                                 */
+    width: 100%;                                                    /* Largura do rodapé    */
+    box-sizing: border-box;                                         /* Faz a largura ser relacionada a borda da caixa, logo o padding e border não influencia   */
+    background-image: radial-gradient(ellipse at left bottom,
+                                      rgba(60, 29, 61, 0.8),
+                                      rgba(60, 29, 61, 0.8) 65%,
+                                      black 65%,
+                                      black 70%,
+                                      transparent 70%,
+                                      transparent);                 /* Criar uma elipse da esquerda para baixo roxo com opacidade 0.8 até 65% do rodapé, preto de 65% até 70% e transparente de 70% em diante */
+    background-size: 25% 100%;                                      /* Tamanho da elipse largura e altura                                                       */
+    background-repeat: no-repeat;                                   /* Não ficar repetindo a imagem                                                             */
+}

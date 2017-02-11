@@ -1,0 +1,74 @@
+/* ---------------------- Mensagem ----------------------- */
+legend,
+label[for="msg"] {
+  font-weight: bold;                                        /* Colocar o label e a legenda em negrito                                       */
+  margin-top: 1em;                                          /* Aumentar a margem superior em 1em                                            */
+}
+
+/* ------------------------ Labels ------------------------ */
+label[for] {
+  display: block;                                           /* Mudar o comportamento do label como um bloco                                 */
+}
+
+/* Botar icone no input */
+label[for="nome"] {
+  position: relative;                                       /* Server como referencia para o position: absolute                             */
+}
+
+label[for="nome"]:after {
+  content: "";                                              /* Criar um pseudoelemento dentro do label com a tag nome                       */
+  background-image: url(../img/usuario.png);                /* Imagem de fundo do pseudoelemento                                            */
+  background-size: 50% 50%;                                 /* Define as dimensões da imagem no box                                         */
+  background-position: center;                              /* Define como e onde a imagem de fundo é posicionada no caso no centro         */
+  background-color: #666;                                   /* Cor da imagem                                                                */
+  background-repeat: no-repeat;                             /* define a maneira como a imagem de fundo é posicionada no caso sem repetição  */
+  width: 2em;                                               /* Largura do pseudoelemento 2em                                                */
+  height: 2em;                                              /* Altura do pseudoelemento 2em                                                 */
+  position: absolute;                                       /* Posicionar a imagem em relação ao position:relative do label[nome]           */
+  top: 100%;                                                /* Posicionar o pseudoelemento logo a baixo do label                            */
+  left: 0;                                                  /* Posicionar o pseudoelemento a esquerda do label                              */
+}
+
+#nome {
+  width: calc(100% - 2em);
+  position: relative;
+  left: 2em;
+}
+
+/* -------------------- Campos de texto --------------------- */
+input[type="text"],
+input[type="email"],
+textarea {
+  font-family: inherit;                                       /* Força o navegador a usar a mesma fonte da página                                       */
+  font-size: 100%;                                            /* Tamanho da fonte do input é de 100%                                                    */
+  padding: .25em .5em;                                        /* Modifica o espaçamento interno do input                                                */
+  width: 100%;                                                /* Colocar a largura do input em 100%                                                     */
+  box-sizing: border-box;                                     /* Re-calcular a largura do input sem contar os paddings e borders                        */
+  border: 1px solid #ccc;                                     /* Borda de 1px solida e branca                                                           */
+}
+
+input:focus,
+textarea:focus {
+  background-color: #FFD;                                     /* Mudar a cor de fundo do input e da textarea quando o foco estiver nelas                */
+}
+
+input:invalid {
+  box-shadow: 0 0 3px red;                                    /* Colocar uma sombra com opacidade 3 de cor vermelha quando o formulario estiver invalido */
+}
+
+/* ---------------------------- Botão ----------------------- */
+button {
+  border: 0;                                                  /* Tirar a borda padrão do botão                                                          */
+  padding: .5em 1em;                                          /* Espaçamento interno do botão                                                           */
+  font-family: "Open Sans Condensed", sans-serif;             /* Fonte do botão                                                                         */
+  background-color: #3C1D3D;                                  /* Cor de fundo do botão                                                                  */
+  color: white;                                               /* Cor do texto do botão                                                                  */
+  font-size: 1.2em;                                           /* Tamanho da fonte do botão                                                              */
+  margin-left: auto;                                          /* Centralizar horizontalmente                                                            */
+  margin-top: 1em;                                            /* Aumentar a margem superior em 1em                                                      */
+}
+
+button:hover,
+button:focus {
+  background-color: #8C1D3D;                                  /* Ao passar o mouse troca a cor de fundo do botão                                        */
+}

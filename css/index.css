@@ -1,0 +1,369 @@
+/* ------------------------------------ HEADER ----------------------------------------- */
+.titulo-principal {
+    -webkit-transform-style: preserve-3d;                                               /* Especifica que os elementos filho vai preservar a sua posição 3D (paralaxe)  */
+            transform-style: preserve-3d;                                               /* Referencia para o posicionamento das palavras em 3D                          */
+    background-image: linear-gradient(to bottom right, white, #851944, black);          /* Gradiente para baixo e a direita de branco, roxo e preto                     */
+}
+
+.foto-home {
+    height: 200px;                                                                      /* Altura da imagem                                                             */
+    border-radius: 50%;                                                                 /* Raio da borda de 50% = circulo                                               */
+    box-shadow: 0 0 1em #000;                                                           /* Sombra da foto de 1em espalhada                                              */
+}
+
+.palavras-home {
+    -webkit-transform-style: preserve-3d;                                               /* Especifica que os elementos filho vai preservar a sua posição 3D (paralaxe)  */
+            transform-style: preserve-3d;
+    position: absolute;                                                                 /* Referencia para posicionar as palavras em 3D                                 */
+    bottom: 0;                                                                          /* Zerar todas as posições em relação a página para que o elemento estique nas 4 cantos do cabeçalho */
+    right: 0;
+    top: 0;
+    left: 0;
+    -webkit-animation: aparece 2s;                                                      /* Animação para as palavras aparecerem em 2s                                   */
+            animation: aparece 2s;
+}
+
+@-webkit-keyframes aparece {
+  0% {
+    opacity: 0;                                                                         /* Quando animação começar as palavras terão opacidade 0 logo não serão vistas  */
+    transform: scale(0.001);                                                            /* Ira crescendo de 0.001 em cada milisegundo                                   */
+  }
+}
+
+@keyframes aparece {
+  0% {
+    opacity: 0;
+    transform: scale(0.001);
+  }
+}
+
+.palavra-home {
+    font-family: "Shadows Into Light", cursive;                                         /* Tipo de fonte de cada palavra                                    */
+    font-weight: bold;                                                                  /* As palavras apareceram em negrito                                */
+    font-size: 400%;                                                                    /* O tamanho da fonte será de 400% ou seja 4x maior para melhorar a qualidade, a palavra será diminuido pela scala */
+    color: #FFF;                                                                        /* Cor das palavras                                                 */
+    position: absolute;                                                                 /* As palavras serão posicionadas em relação ao ul palavras home    */
+}
+
+.boas-praticas {
+    top: 70%;                                                                           /* Posiciona-se há 70% para baixo                                   */
+    left: 20%;                                                                          /* Posiciona-se há 20% para direita                                 */
+    opacity: .5;                                                                        /* Opacidade de 0.5                                                 */
+    -webkit-transform: translate(-50%, -50%) translateZ(1px) rotate(10deg) scale(.25);  /* Transladar 50% para esquerda e 50% para cima, Translada 1px para frente(3D), rotaciona 10 graus para direita e aumenta em 0.25 sua escala para diminuir as palavras novamente */
+            transform: translate(-50%, -50%) translateZ(1px) rotate(10deg) scale(.25);
+}
+
+.eficiencia {
+    top: 50%;
+    left: 60%;
+    -webkit-transform: translate(-50%, -50%) translateZ(4px) rotate(-5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(4px) rotate(-5deg) scale(.25);
+}
+
+.codigo-limpo {
+    top: 45%;
+    left: 25%;
+    opacity: .6;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
+}
+.css3 {
+    top: 55%;
+    left: 35%;
+    opacity: .5;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(5deg) scale(.25);
+}
+.html5 {
+    top: 30%;
+    left: 65%;
+    opacity: .7;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
+}
+.javascript {
+    top: 15%;
+    left: 60%;
+    opacity: .5;
+    -webkit-transform: translate(-50%, -50%) translateZ(1px) rotate(-5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(1px) rotate(-5deg) scale(.25);
+}
+.acessibilidade {
+    top: 30%;
+    left: 35%;
+    opacity: .8;
+    -webkit-transform: translate(-50%, -50%) translateZ(3px) rotate(-5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(3px) rotate(-5deg) scale(.25);
+}
+.responsivo {
+    top: 40%;
+    left: 40%;
+    opacity: .9;
+    -webkit-transform: translate(-50%, -50%) translateZ(3px) rotate(10deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(3px) rotate(10deg) scale(.25);
+}
+.otimizacoes {
+    top: 70%;
+    left: 65%;
+    opacity: .8;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(-5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(-5deg) scale(.25);
+}
+.agilidade {
+    top: 75%;
+    left: 35%;
+    opacity: .4;
+    -webkit-transform: translate(-50%, -50%) translateZ(1px) rotate(5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(1px) rotate(5deg) scale(.25);
+}
+.design {
+    top: 40%;
+    left: 60%;
+    opacity: .7;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
+}
+
+.banner-twitter {
+    position: absolute;                                             /* Se posicionar em relação a página                                                */
+    top: 0;                                                         /* No topo da página                                                                */
+    right: 0;                                                       /* A direita                                                                        */
+    line-height: 1;                                                 /* Espaçamento entre linhas de 1 ou padrão                                          */
+    width: 14em;                                                    /* Largura de 14em                                                                  */
+    padding: 1em 0;                                                 /* Espaçamento interno do bloco                                                     */
+    box-sizing: border-box;                                         /* Calcular o tamanho do bloco sem contar margem                                    */
+    text-align: center;                                             /* Texto centralizado                                                               */
+    text-decoration: none;                                          /* Link sem decoração quando clica                                                  */
+    background-color: #3C1D3D;                                      /* Cor de fundo roxa                                                                */
+    color: white;                                                   /* Cor do texto branca                                                              */
+    border: .25em solid black;                                      /* Borda do link                                                                    */
+    font-size: 1.2em;                                               /* Tamanho da fonte                                                                 */
+    font-family: "Open Sans Condensed", sans-serif;                 /* Tipo de fonte                                                                    */
+    transform: translate(calc(.707 * (3.5em - 100%) + 100%), 
+                         calc(-.707 * 3.5em)) rotate(45deg);        /* rotacionar em 45 graus e transladar com o calculo para que fique na posição correta da pagina 0.707=cos(45) */
+    -webkit-transform-origin: 0 0;                                  /* Origem da rotação no eixoX e eixoY no caso no canto superior esquerdo            */
+            transform-origin: 0 0;
+    -webkit-animation: aparece 0.5s;                                /* Animação onde o banner aparece em 0.5 segundos                                   */
+            animation: aparece 0.5s;
+    -webkit-animation-delay: 2s;                                    /* Porém demora 2 segundo até começar a aparecer                                    */
+            animation-delay: 2s;
+    -webkit-animation-fill-mode: backwards;                         /* A animação vai aplicar os valores de propriedade definidos no keyframe           */
+            animation-fill-mode: backwards;
+}
+
+
+/* -------------------------------------- MAIN ----------------------------------------- */
+.secao-inicio {
+    padding: 2em;                                               /* Espaçamento interno de 2em                                                                   */
+}
+
+.saudacao p {
+    font-size: 1.5em;                                           /* Tamanho da fonte                                                                             */
+    color: #99A;                                                /* Cor da fonte                                                                                 */
+    line-height: 1;                                             /* Espaçamento entre linhas                                                                     */
+    padding: 2em;                                               /* Espaçamento interno                                                                          */
+}
+
+.saudacao-inicio {
+    font-size: 3em;                                             /* Tamanho da fonte Olá                                                                         */
+    color: #889;                                                /* Cor da fonte olá                                                                             */
+}
+
+.saudacao strong {
+    font-size: 2em;                                             /* Tamanho da fonte de 2em João da silva                                                        */
+    color: #000;                                                /* Cor da fonte preta João da silva                                                             */
+}
+
+.saudacao-ultima-linha {
+    text-align: right;                                          /* Alinhar o texto da ultima linha a direita                                                    */
+    display: block;                                             /* Transformar o texto da ultima linha em um bloco dando uma quebra de linha ao p                                       */
+}
+
+.saudacao em {
+    color: #851944;                                             /* Cor do texto Sites Maravilhoso                                                               */
+    font-size: 4em;                                             /* Tamanho do texto Sites Maravilhoso                                                           */
+    display: inline-block;                                      /* Colocar o texto na mesma linha porém se comportando como um bloco                            */
+    -webkit-transform: rotate(-5deg) skew(-10deg);              /* Rotacionar o texto em 5 graus a esquerda e 10 graus torcido                                  */
+            transform: rotate(-5deg) skew(-10deg);
+    -webkit-animation: flutua 1s infinite;                      /* Criar uma animação de flutuar durante 1s e rodando infinitamente                             */
+            animation: flutua 1s infinite;
+    -webkit-animation-direction: alternate;                     /* Essa animação vai fica alternando                                                            */
+            animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in-out;             /* Devagar na subida e na descida                                                               */
+            animation-timing-function: ease-in-out;
+    position: relative;                                         /* Permite que a animação seja em executada em relação ao em                                    */
+}
+
+@-webkit-keyframes flutua {
+  from {
+    top: -5px;                                                  /* O texto inicia 5px acima em relação a posição original dele                                  */
+  }
+  to {
+    top: 5px;                                                   /* E vai até 5px abaixo em relação a posição original dele                                      */
+  }
+}
+
+@keyframes flutua {
+  from {
+    top: -5px;
+  }
+  to {
+    top: 5px;
+  }
+}
+
+.saudacao em:hover {
+    animation-play-state: paused;                               /* Pausa a animação de flutuar do texto Sites maravilhoso ao passar o mouse                     */
+}
+
+.secao-inicio h2 {
+    font-size: 3em;                                             /* Tamanho da fonte de 3em                                                                      */
+    text-transform: uppercase;                                  /* Mudar o texto para letra maiuscula                                                           */
+    margin-bottom: .5em;                                        /* Margem inferior de 0.5em                                                                     */
+    text-shadow: 5px 5px #000;                                  /* Adicionar sombra aos subtitulos                                                              */
+    color: #FFF;                                                /* Cor da fonte dos subtitulos                                                                  */
+}
+
+.trabalhos {
+    background-color: #3C1D3D;                                  /* Cor de fundo da section de trabalhos                                                         */
+    background-image: linear-gradient(135deg,
+                                      transparent,
+                                      transparent 14px,
+                                      rgba(0, 0, 0, 0.1) 14px,
+                                      rgba(0, 0, 0, 0.1) 15px,
+                                      transparent 15px,
+                                      transparent);             /* há 135 graus, fazer uma linha de 1px preta de 14px em 14px                                   */
+    background-size: 20px 20px;                                 /* Tamanho do gradiente de 20px horizontal e 20px vertical                                      */
+    background-attachment: fixed;                               /* O Grafiente é fixo na tela                                                                   */
+}
+
+.trabalhos ul {
+    display: flex;                                              /* Criar um container flex                                                                      */
+    border: .5em solid black;                                   /* A borda desse container será 0.5em solida e preta                                            */
+}
+.trabalhos li {                 
+    flex: 1;                                                    /* Todos os itens dentro do container terá o mesmo espaçamento e tamanho                        */ 
+    border: .5em solid #000;                                    /* Borda de cada item 0.5em solida e preta                                                      */
+}
+.trabalhos img {
+    width: 100%;                                                /* Largura total da imagem                                                                      */
+    display: block;                                             /* Imagem se comportando como um bloco                                                          */
+}
+
+.trabalhos li:first-child {
+    order: 2;                                                   /* Ordem na qual aparece a primeira imagem, no caso aparece na segunda posição                  */
+    transform: scale(1.2);                                      /* Tamanho da imagem acima com uma escala um pouco maior                                                                */ 
+}
+.trabalhos li:nth-child(2) {                                                            
+    order: 1;                                                   /* Ordem na qual aparece a segunda imagem, no caso ela vai ser a primeira                       */
+}
+.trabalhos li:last-child {
+    order: 3;                                                   /* Ordem na qual aparece a ultima imagem, no caso ela vai ser a terceira                        */
+}
+
+.blog {
+    background-color: #999;                                             /* Cor de fundo da section                                                                                  */
+    position: relative;                                                 /* Referencia para posicionar os blocos de posts                                        */
+    color: #FFF;                                                        /* Cor da fonte                                                                         */
+    border-bottom: .5em solid #851944;                                  /* Borda inferior                                                                       */
+    background-image: linear-gradient(45deg,
+                                      transparent,
+                                      transparent 14px,
+                                      rgba(255, 255, 255, 0.1) 14px,
+                                      rgba(255, 255, 255, 0.1) 15px,
+                                      transparent 15px,
+                                      transparent);                     /* há 45 graus, fazer uma linha de 1px preta de 14px em 14px                            */
+    background-size: 20px 20px;                                         /* Tamanho do gradiente de 20px horizontal e 20px vertical                              */
+    background-attachment: fixed;                                       /* O Grafiente é fixo na tela                                                           */
+}
+.blog small {
+    position: relative;                                                 /* Posicionar o texto Ultimos posts em relação a ele mesmo                              */
+    top: -2em;                                                          /* Subir o texto acima em 2em                                                           */
+}
+.blog li {
+    width: 30%;                                                         /* Largura do bloco branco que aparece ao passar o mause sobre os links                 */
+}
+.blog li a {
+    color: #FCF;                                                        /* Cor da fonte dos links                                                               */                              
+    padding: .5em;                                                      /* Espaçamento interno dos links dentro do bloco                                        */
+    display: block;                                                     /* Transformar os links em um bloco                                                     */
+}
+
+.blog .inicio-post {
+    position: absolute;                                             /* Posicionar os posts em relação a section blog                                            */
+    top: 4em;                                                       /* Posicionar os posts 4em para baixo                                                       */
+    left: 30%;                                                      /* Posicionar os posts 30% a direita                                                        */                        
+    right: 4em;                                                     /* Posicionar os posts 4em a esquerda                                                       */
+    height: 9.05em;                                                 /* Tamanho do bloco de texto de 9.05em                                                      */
+    background-color: #F2FFFC;                                      /* Cor de fundo dos posts branca                                                            */
+    color: #000;                                                    /* Cor da fonte preta                                                                       */
+    padding: 1.5em;                                                 /* Espaçamento interno de 1.5em                                                             */
+    display: none;                                                  /* Esconde todos os post da tela                                                            */ 
+}
+
+.blog .mais-recente a:hover, 
+.blog .mais-recente a:focus {
+    background-color: #F2FFFC;                                      /* Ao passar o mause sobre os links dos post mudar a cor de fundo                           */
+    color: #F26;                                                    /* Ao passar o mause sobre os links dos post mudar a cor do texto                           */
+}
+
+.blog a:hover + .inicio-post,
+.blog a:focus + .inicio-post {
+    display: block;                                                 /* Mostrar na tela o bloco de post ao passar o link sobre eles                              */
+}
+
+.botao-index {
+    font-size: 1.25em;                                              /* Tamanho da fonte do botão 1.25em                                                         */
+    background-color: #851944;                                      /* Cor de fundo do botão roxa                                                               */
+    color: #FFF;                                                    /* Cor do texto do botão branco                                                             */
+    padding: .5em;                                                  /* Espaçamento interno do botão 0.5em                                                       */
+    border: .2em solid black;                                       /* Borda do botão de 0.2em solida e preta                                                   */
+    width: 40ch;                                                    /* Largura do botão                                                                         */
+    margin: 2em auto;                                               /* Margem do botão de 2em vertical e centralizado horizontalmente                           */
+    display: block;                                                 /* Comportamento do botão como um bloco                                                     */
+    text-align: center;                                             /* alinhar o texto no centro do botão                                                       */
+    box-shadow: 0 0 1em #000, inset 0 0 .5em #FFF;                  /* Sombra Externa de 1em de espalhamento preta e interna de 0.5em de espalhamento branca    */
+    text-decoration: none;                                          /* Tirar o sublinhado que aparece no botão ao ser clicado                                   */
+    transition: .5s;                                                /* Transição de 0.5s para aparecer todos os efeitos do hover ao passar o mouse              */
+}
+
+.botao-index:focus,
+.botao-index:hover {
+    background-color: #C54974;                                      /* Cor de fundo ao passar o mouse dobre o botão                                             */
+    color: white;                                                   /* Cor do texto do botão ao passar o mouse                                                  */
+    box-shadow: 0 0 1em #FA9;                                       /* Sombra com espalhamento de 1em rosa ao passar o mouse                                    */
+}
+
+
+/* -------------------------------------- FOOTER ------------------------------------------ */
+footer {
+    background-color: #000;                             /* Cor de fundo do rodapé           */
+    color: #FFF;                                        /* Cor do texto rodapé              */
+    padding: 2em;                                       /* Espaçamento interno do rodapé    */
+}
+footer h2 {
+    font-size: 3em;                                     /* Tamanho da fonte                 */
+}
+footer a {
+    color: #F99;                                        /* Cor da letra                     */
+}
+
+/* -------------------------------------- GERAL ------------------------------------------------------------------- */
+main {
+    width: 100%;                                         /* Largura da pagina                                       */
+    padding-bottom: 0;                                   /* Retira o espaçamento do main em relação ao footer       */
+}
+
+/* Paralaxe ou palavras se movem ao dar scroll na pagina */
+body {
+    -webkit-perspective: 6px;                           /* Há 6px o elemento 3D é colocado a partir da vista, quanto menor mais proximo da vista (paralaxe)                         */
+            perspective: 6px;                           /* São os elementos filhos que recebem a pespectiva, por isso tem que ser feito no body                                     */
+    -webkit-perspective-origin: 50% 160px;              /* Onde o elemento 3D é baseado a partir do eixoX e eixoY (menor direita e baixo e maior esquerda e cima), valor padrão 50% */
+            perspective-origin: 50% 160px;              /* São os elementos filhos que recebem a pespectiva, por isso tem que ser feito no body                                     */
+    display: block;                                     /* Transformar o body em um bloco */
+}
+
+html,body {
+    overflow-x: hidden;                                 /* ignorar o que fica para fora da página (paralaxe)                                                                        */
+    height: 100%;                                       /* Altura 100% para aplicar o paralaxe ou palavras se movem ao dar scroll na pagina                                         */
+}
